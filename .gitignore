@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+yarn.lock
+.env
+.env.development
+production.env
+#.env
+#ormconfig.*
+cert.pem
+key.pem

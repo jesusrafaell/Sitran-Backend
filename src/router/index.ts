@@ -1,0 +1,48 @@
+import { Application } from 'express';
+import abonoCliente from './abonoCliente';
+import abonoxbanco from './abonoxbanco';
+import aboTerminal from './aboTerminal';
+import afiliados from './afiliados';
+import agregadores from './agregadores';
+import auth from './auth';
+import comercios from './comercios';
+import contabilidad from './contabilidad';
+import contracargo from './contracargo';
+import cuotasResumidas from './cuotasResumidas';
+import history from './history';
+import librePago from './librePago';
+import mantenimiento from './mantenimiento';
+import metricasPtoContulta from './metricasPtoContulta';
+import pagoCuota from './pagoCuota';
+import produccion from './produccion';
+import reporteAci from './reporteAci';
+import seguridad from './seguridad';
+import test from './test';
+import transaccional from './transaccional';
+import views from './views';
+
+const Routes = (app: Application) => {
+	auth(app);
+	seguridad(app);
+	history(app);
+	aboTerminal(app);
+	transaccional(app);
+	cuotasResumidas(app);
+	abonoxbanco(app);
+	librePago(app);
+	reporteAci(app);
+	pagoCuota(app);
+	mantenimiento(app);
+	contracargo(app);
+	contabilidad(app);
+	abonoCliente(app);
+	comercios(app);
+	afiliados(app);
+	agregadores(app);
+	metricasPtoContulta(app);
+	views(app);
+	produccion(app);
+	test(app);
+};
+
+export default Routes;
